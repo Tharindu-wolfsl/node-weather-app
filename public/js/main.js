@@ -1,9 +1,3 @@
-
-
-console.log("Weather site is online!")
-
-
-
 const form=document.querySelector('form')
 const input=document.querySelector('input')
 const msg1=document.querySelector('#message-1')
