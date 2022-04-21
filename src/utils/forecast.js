@@ -18,7 +18,8 @@ const forecast=(latitude,longitude,callback)=>{
             callback(undefined,{
                 location:body.name,
                 weather:body.weather[0],
-                temperature:body.main
+                temperature:body.main,
+                wind:body.wind
 
             })
         }

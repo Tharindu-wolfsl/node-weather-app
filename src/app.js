@@ -88,7 +88,7 @@ geoCode(req.query.address,(error,{latitude,longitude,location}={})=>{
         return res.send({error})
     }
 
-    forecast(latitude,longitude,(error,{location,weather,temperature}={})=>{
+    forecast(latitude,longitude,(error,{location,weather,temperature,wind}={})=>{
 
         if(error){
 
@@ -100,7 +100,8 @@ geoCode(req.query.address,(error,{latitude,longitude,location}={})=>{
 
         address:req.query.address,
         location:location,
-        forecast:'it is currently '+temperature.temp+' degrees out. There can be '+weather.main+' today.'
+        forecast:'it is currently '+temperature.temp+' degrees out. There can be '+weather.main+' and have '+wind.speed+' wind speed today.',
+ 
 
     })
         // console.log(chalk.blue.inverse("location:",data.location))

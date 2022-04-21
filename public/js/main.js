@@ -4,6 +4,8 @@ const msg1=document.querySelector('#message-1')
 const msg2=document.querySelector('#message-2')
 
 
+
+
 msg1.textContent=''
 msg2.textContent=''
 
@@ -18,11 +20,14 @@ form.addEventListener('submit',(e)=>{
     response.json().then((data)=>{
        if(data.error){
             msg1.textContent=''
+          
             msg2.textContent=data.error
          }
        else{
         msg1.textContent=data.location
         msg2.textContent=data.forecast
+   
+
        }
      
     })
