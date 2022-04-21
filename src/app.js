@@ -23,6 +23,8 @@ const partialPath=path.join(__dirname,'../templates/partials')
 
 const app=express()
 
+const port=process.env.PORT || 3000
+
 //define views path
 app.set('views',viewsPath)
 
@@ -148,6 +150,6 @@ res.render('404error',{
 
 //create server
 
-app.listen(3000,()=>{
-    console.log("Server is online on port:3000")
+app.listen(port,()=>{
+    console.log("Server is online on port: "+port)
 })

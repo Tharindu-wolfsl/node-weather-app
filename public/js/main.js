@@ -13,7 +13,7 @@ form.addEventListener('submit',(e)=>{
    //e=event
    //to prevent default refresh of page on form submit
    e.preventDefault()
-   fetch('http://localhost:3000/weather?address='+input.value).then((response)=>{
+   fetch('/weather?address='+input.value).then((response)=>{
 
     response.json().then((data)=>{
        if(data.error){
